@@ -24,10 +24,11 @@ function createCountry(name, population, region, capital, img) {
 }
 
 function AddAllCountries() {
-  sendHTTPRequest("../data.json")
+  sendHTTPRequest("https://restcountries.com/v3.1/all")
   .then(data => {
+    console.log(data);
     data.forEach(element => {
-      const country = createCountry(element.name, element.population, element.region, element.capital, element.flag)
+      const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png)
       countriesDiv.append(country)
     });
   })
