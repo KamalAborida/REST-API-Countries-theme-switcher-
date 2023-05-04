@@ -1,0 +1,80 @@
+:root{
+  --color-scheme: 
+}
+
+//Dark mode
+$Dark-Blue-DElem: hsl(209, 23%, 22%);   // element
+$Very-Dark-Blue-DBack: hsl(200, 15%, 8%);   // background
+
+
+//Light mode
+$Very-Dark-Blue-LText: hsl(207, 26%, 17%); // text
+$Dark-Gray-LInpt: hsl(0, 0%, 52%);  // input
+$Very-Light-Gray-LBack: hsl(0, 0%, 98%);  // background
+
+// Light && Dark
+$White: hsl(0, 0%, 100%);
+
+
+// Font-Sizes
+$Homepage-Items-FontSize: 14px;
+$Detail-Page-FontSize: 16px;
+
+
+// Weights
+$font-weights: ("regular": 300, "medium": 600, "bold": 800);
+
+
+
+$Dark-Mode: (
+  "element": $Dark-Blue-DElem,
+  "background": $Very-Dark-Blue-DBack,
+  "text": $White,
+  "shadow": rgba(18, 18, 18, 0.456)
+);
+
+$Light-Mode: (
+  "element": $White,
+  "background": $Very-Light-Gray-LBack,
+  "text": $Very-Dark-Blue-LText,
+  "shadow": rgba(128, 128, 128, 0.456)
+);
+
+
+@function getTheme($bool, $area) {
+  @if ($bool == true) {
+    $BackGround-Color: map-get($Light-Mode, "background");
+    $Text-Color: map-get($Light-Mode, "text");
+    $Elements-Color: map-get($Light-Mode, "element");
+    $Shadow-Color: map-get($Light-Mode, "shadow");
+    @if ($area == 'bg') {
+      @return $BackGround-Color;
+    }
+    @else if ($area == 'text') {
+      @return $Text-Color;
+    }
+    @else if ($area == 'element') {
+      @return $Elements-Color;
+    }
+    @else if ($area == 'shadow') {
+      @return $Shadow-Color;
+    }
+  } @else {
+    $BackGround-Color: map-get($Dark-Mode, "background");
+    $Text-Color: map-get($Dark-Mode, "text");
+    $Elements-Color: map-get($Dark-Mode, "element");
+    $Shadow-Color: map-get($Dark-Mode, "shadow");
+    @if ($area == 'bg') {
+      @return $BackGround-Color;
+    }
+    @else if ($area == 'text') {
+      @return $Text-Color;
+    }
+    @else if ($area == 'element') {
+      @return $Elements-Color;
+    }
+    @else if ($area == 'shadow') {
+      @return $Shadow-Color;
+    }
+  }
+}

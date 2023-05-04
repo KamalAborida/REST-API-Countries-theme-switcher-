@@ -1,0 +1,35 @@
+$border-radius: 5px;
+
+.filter__sDiv {
+  width: 100%;
+  position: relative;
+  border-radius: $border-radius;
+  margin-bottom: 40px;
+
+  input {
+    border: 0;
+    padding: 1em 2em 1em 80px;
+    border-radius: $border-radius;
+    background-color: $White;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  i {
+    position: absolute;
+    left: 40px;
+    top: 35%;
+  }
+}
+
+
+
+@media screen and (min-width: 800px) {
+  .filter__sDiv {
+    width: 40%;
+    margin: 0;
+  }
+}

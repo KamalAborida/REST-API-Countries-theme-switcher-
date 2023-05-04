@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="assets/app.js" defer></script>
+  <script src="https://kit.fontawesome.com/7b8b6f2660.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <title>Countries</title>
+</head>
+<body>
+  <nav class="nav">
+    <h1 class="nav__title">Where in the world?</h1>
+    <div class="nav__darkModeDiv" id="themeBtn">
+      <i class="fa-regular fa-moon"></i>
+      <p><a href="#">Dark Mode</a></p>
+    </div>
+  </nav>
+
+  <section id="filter">
+    <div class="filter__sDiv">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="search-inpt" type="text" placeholder="Search for a country...">
+    </div>
+    <select name="regions" id="regions">
+      <option value="" disabled selected hidden>Filter by region</option>
+      <option value="africa">Africa</option>
+      <option value="america">America</option>
+      <option value="asia">Asia</option>
+      <option value="europe">Europe</option>
+      <option value="oceania">Oceania</option>
+    </select>
+  </section>
+
+  <section id="countries">
+    <!--Country-->
+    <!-- <div class="countryBox">
+      <div class="img" style="background-image:url(https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg)">
+      </div>
+      <div class="countryBox__infoDiv">
+        <h2 class="countryName">${name}</h2>
+        <p class="population">Population: <span>${population}</span></p>
+        <p class="region">Region: <span>${region}</span></p>
+        <p class="capital">Capital: <span>${capital}</span></p>
+      </div>
+    </div> -->
+    <!--Country-->
+  </section>
+</body>
+</html>

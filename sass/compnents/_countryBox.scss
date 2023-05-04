@@ -1,0 +1,62 @@
+.countryBox {
+  width: 70%;
+  margin: 30px auto;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__infoDiv {
+    width: 70%;
+    margin: 30px auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px 5px rgba(7, 7, 7, 0.138);
+  }
+}
+
+.countryName {
+  font-weight: map-get($font-weights, 'bold');
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.population, .region, .capital {
+  font-weight: map-get($font-weights, 'medium');
+  margin: 10px 0;
+
+  span {
+    font-weight: 100;
+  }
+}
+
+
+// Tablet
+@media screen and (min-width: 500px) {
+  .countryBox {
+    height: auto;
+  }
+  
+  .countryName {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .population, .region, .capital {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+}
+
+// PC
+@media screen and (min-width: 800px) {
+  .countryBox {
+    margin: 0;
+    width: auto;
+  }
+}

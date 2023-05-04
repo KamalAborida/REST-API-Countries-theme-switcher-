@@ -1,0 +1,17 @@
+#filter {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 40px auto 70px auto;
+}
+
+
+// PC
+@media screen and (min-width: 800px) {
+  #filter {
+    flex-direction: row;
+    margin: 40px auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

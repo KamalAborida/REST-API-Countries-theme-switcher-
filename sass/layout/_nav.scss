@@ -1,0 +1,51 @@
+.nav {
+  width: 100%;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-weight: map-get($font-weights, 'bold');
+    font-size: 1.2rem;
+  }
+
+  &__darkModeDiv {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    font-weight: map-get($font-weights, 'medium');
+
+    a {
+      text-decoration: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: 500px) {
+  .nav {
+    padding: 20px 80px;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+
+}
+
+// PC
+@media screen and (min-width: 800px) {
+  .nav {
+    padding: 20px 100px;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+}

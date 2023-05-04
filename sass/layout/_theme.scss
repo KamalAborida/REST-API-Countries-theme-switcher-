@@ -1,0 +1,30 @@
+@import '../themes/themes';
+
+.nav {
+  background-color: getTheme(true, "element");
+  color: getTheme(true, "text");
+  box-shadow: 1px 1px 10px 2px getTheme(true, "shadow");
+
+  a {
+    color: getTheme(true, "text");
+  }
+}
+
+body {
+  background-color: getTheme(true, "bg");;
+}
+
+
+.dark-mode {
+  .nav {
+    background-color: getTheme(false, "element");
+    color: getTheme(false, "text");
+    box-shadow: 1px 1px 10px 2px getTheme(false, "shadow");
+
+    a{
+      color: getTheme(false, "text");
+    }
+  }
+
+  background-color: getTheme(false, "bg");
+}

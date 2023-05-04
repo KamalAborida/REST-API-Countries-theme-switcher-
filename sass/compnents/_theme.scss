@@ -1,0 +1,62 @@
+@import '../themes/themes';
+
+#regions {
+  background-image: url('../../assets/icons8-thick-arrow-pointing-down-30B.png');
+  background-color: getTheme(true, "element");
+  color: getTheme(true, "text");
+  box-shadow: 1px 1px 6px 2px getTheme(true, "shadow");
+}
+
+.countryBox {
+  background-color: getTheme(true, "element");
+  color: getTheme(true, "text");
+  box-shadow: 1px 1px 6px 2px getTheme(true, "shadow");
+}
+
+.filter__sDiv {
+  input {
+    background-color: getTheme(true, "element");
+    color: getTheme(true, "text");
+    box-shadow: 1px 1px 6px 2px getTheme(true, "shadow");
+
+    &::placeholder {
+      color: getTheme(true, "text");
+    }
+  }
+
+  i {
+    color: getTheme(true, "text");
+  }
+}
+
+
+.dark-mode {
+  #regions {
+    background-image: url('../../assets/icons8-thick-arrow-pointing-down-30W.png');
+    background-color: getTheme(false, "element");
+    color: getTheme(false, "text");
+    box-shadow: 1px 1px 6px 2px getTheme(false, "shadow");
+  }
+  
+  .countryBox {
+    background-color: getTheme(false, "element");
+    color: getTheme(false, "text");
+    box-shadow: 1px 1px 6px 2px getTheme(false, "shadow");
+  }
+  
+  .filter__sDiv {
+    input {
+      background-color: getTheme(false, "element");
+      color: getTheme(false, "text");
+      box-shadow: 1px 1px 6px 2px getTheme(false, "shadow");
+  
+      &::placeholder {
+        color: getTheme(false, "text");
+      }
+    }
+  
+    i {
+      color: getTheme(false, "text");
+    }
+  }
+}

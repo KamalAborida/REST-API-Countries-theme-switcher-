@@ -1,0 +1,33 @@
+$border-radius: 5px;
+
+#regions {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 50%;
+  border-radius: $border-radius;
+  border-radius: $border-radius;
+  border: 0;
+  padding: 1em;
+  /* Optional styles to match the arrow icon's size to the height of the select box */
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+
+  option {
+    font-weight: bold;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+
+@media screen and (min-width: 800px) {
+  #regions {
+    width: 20%;
+    margin: 0;
+  }
+}

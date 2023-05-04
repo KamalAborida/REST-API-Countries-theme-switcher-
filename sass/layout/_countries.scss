@@ -1,0 +1,28 @@
+#countries {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+// Tablet
+@media screen and (min-width: 500px) {
+  
+}
+
+// PC
+@media screen and (min-width: 800px) {
+  #countries {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #countries {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

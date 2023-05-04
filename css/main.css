@@ -1,0 +1,331 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+html {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+
+.countryBox {
+  width: 70%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.countryBox img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.countryBox__infoDiv {
+  width: 70%;
+  margin: 30px auto;
+}
+.countryBox:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 10px 5px rgba(7, 7, 7, 0.138);
+}
+
+.countryName {
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.population, .region, .capital {
+  font-weight: 600;
+  margin: 10px 0;
+}
+.population span, .region span, .capital span {
+  font-weight: 100;
+}
+
+@media screen and (min-width: 500px) {
+  .countryBox {
+    height: auto;
+  }
+  .countryName {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  .population, .region, .capital {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  .countryBox {
+    margin: 0;
+    width: auto;
+  }
+}
+.filter__sDiv {
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+.filter__sDiv input {
+  border: 0;
+  padding: 1em 2em 1em 80px;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+}
+.filter__sDiv input:focus {
+  outline: none;
+}
+.filter__sDiv i {
+  position: absolute;
+  left: 40px;
+  top: 35%;
+}
+
+@media screen and (min-width: 800px) {
+  .filter__sDiv {
+    width: 40%;
+    margin: 0;
+  }
+}
+#regions {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 50%;
+  border-radius: 5px;
+  border-radius: 5px;
+  border: 0;
+  padding: 1em;
+  /* Optional styles to match the arrow icon's size to the height of the select box */
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+}
+#regions option {
+  font-weight: bold;
+}
+#regions:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 800px) {
+  #regions {
+    width: 20%;
+    margin: 0;
+  }
+}
+:root {
+  --color-scheme: ;
+}
+
+#regions {
+  background-image: url("../../assets/icons8-thick-arrow-pointing-down-30B.png");
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(207, 26%, 17%);
+  box-shadow: 1px 1px 6px 2px rgba(128, 128, 128, 0.456);
+}
+
+.countryBox {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(207, 26%, 17%);
+  box-shadow: 1px 1px 6px 2px rgba(128, 128, 128, 0.456);
+}
+
+.filter__sDiv input {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(207, 26%, 17%);
+  box-shadow: 1px 1px 6px 2px rgba(128, 128, 128, 0.456);
+}
+.filter__sDiv input::-moz-placeholder {
+  color: hsl(207, 26%, 17%);
+}
+.filter__sDiv input::placeholder {
+  color: hsl(207, 26%, 17%);
+}
+.filter__sDiv i {
+  color: hsl(207, 26%, 17%);
+}
+
+.dark-mode #regions {
+  background-image: url("../../assets/icons8-thick-arrow-pointing-down-30W.png");
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 6px 2px rgba(18, 18, 18, 0.456);
+}
+.dark-mode .countryBox {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 6px 2px rgba(18, 18, 18, 0.456);
+}
+.dark-mode .filter__sDiv input {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 6px 2px rgba(18, 18, 18, 0.456);
+}
+.dark-mode .filter__sDiv input::-moz-placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .filter__sDiv input::placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode .filter__sDiv i {
+  color: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.nav {
+  width: 100%;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__title {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.nav__darkModeDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  font-weight: 600;
+}
+.nav__darkModeDiv a {
+  text-decoration: none;
+}
+.nav__darkModeDiv:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+  .nav {
+    padding: 20px 80px;
+  }
+  .nav__title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav {
+    padding: 20px 100px;
+  }
+  .nav__title {
+    font-size: 2rem;
+  }
+}
+#filter {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 40px auto 70px auto;
+}
+
+@media screen and (min-width: 800px) {
+  #filter {
+    flex-direction: row;
+    margin: 40px auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+#countries {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  #countries {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #countries {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+:root {
+  --color-scheme: ;
+}
+
+.nav {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(207, 26%, 17%);
+  box-shadow: 1px 1px 10px 2px rgba(128, 128, 128, 0.456);
+}
+.nav a {
+  color: hsl(207, 26%, 17%);
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.dark-mode {
+  background-color: hsl(200, 15%, 8%);
+}
+.dark-mode .nav {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 10px 2px rgba(18, 18, 18, 0.456);
+}
+.dark-mode .nav a {
+  color: hsl(0, 0%, 100%);
+}
+
+:root {
+  --color-scheme: ;
+}
