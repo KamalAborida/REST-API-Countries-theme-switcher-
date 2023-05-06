@@ -26,7 +26,7 @@ function createCountry(name, population, region, capital, img, cca2) {
 
 function showCountryInfo(e) {
   localStorage.setItem("cca2", e.target.closest(".countryBox").id)
-  window.location.replace("./countryPage.html");
+  window.location.replace("./Pages/countryPage.html");
 }
 
 // function AddAllCountries() {
