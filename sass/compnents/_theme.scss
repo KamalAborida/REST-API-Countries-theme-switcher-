@@ -29,6 +29,21 @@
   }
 }
 
+.btn {
+  box-shadow: 1px 1px 6px 2px getTheme(true, "shadow");
+  background-color: getTheme(true, "element");
+  color: getTheme(true, "text");
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 2px getTheme(true, "shadow");
+  }
+}
+
+.properties {
+  color: getTheme(true, "text");
+}
+
 
 .dark-mode {
   #regions {
@@ -58,5 +73,20 @@
     i {
       color: getTheme(false, "text");
     }
+  }
+
+  .btn {
+    box-shadow: 1px 1px 6px 2px getTheme(false, "shadow");
+    background-color: getTheme(false, "element");
+    color: getTheme(false, "text");
+  
+    &:hover {
+      cursor: pointer;
+      box-shadow: 1px 1px 10px 2px getTheme(false, "shadow");
+    }
+  }
+
+  .properties {
+    color: getTheme(false, "text");
   }
 }

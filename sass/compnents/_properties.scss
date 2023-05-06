@@ -1,0 +1,8 @@
+.properties {
+  font-weight: map-get($font-weights, 'medium');
+  margin: 10px 0;
+
+  span {
+    font-weight: 100;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="https://kit.fontawesome.com/7b8b6f2660.js" crossorigin="anonymous"></script>
+  <script src="./assets/country.js" defer></script>
+  <title>Country</title>
+</head>
+<body>
+  <nav class="nav">
+    <h1 class="nav__title">Where in the world?</h1>
+    <div class="nav__darkModeDiv" id="themeBtn">
+      <i class="fa-regular fa-moon"></i>
+      <p><a href="#">Dark Mode</a></p>
+    </div>
+  </nav>
+
+  <section class="back">
+    <button class="btn" id="backBtn">
+      <i class="fa-solid fa-left-long"></i>
+      Back
+    </button>
+  </section>
+
+  <main class="main">
+    <div class="main__flagDiv">
+      <img src="https://propertywiselaunceston.com.au/wp-content/themes/property-wise/images/no-image.png" alt="Country Flag" id="flag">
+    </div>
+
+    <div class="main__InfoDiv">
+      <div class="main__InfoDiv__nameDiv">
+        <h1 id="countryName">Country Name</h1>
+      </div>
+
+      <div class="main__InfoDiv__propertiesDiv">
+        <div>
+          <p class="properties" id="native-name">Native Name: <span>NULL</span></p>
+          <p class="properties" id="population">Population: <span>0</span></p>
+          <p class="properties" id="region">Region: <span>NULL</span></p>
+          <p class="properties" id="sub-region">Sub Region: <span>NULL</span></p>
+          <p class="properties" id="capital">Capital: <span>NULL</span></p>
+        </div>
+        <div>
+          <p class="properties" id="top-lvl-domain">Top Level Domain: <span>NULL</span></p>
+          <p class="properties" id="currencies">Currencies: <span>NULL</span></p>
+          <p class="properties" id="languages">Languages: <span>NULL</span></p>
+        </div>
+      </div>
+
+      <div class="main__InfoDiv__bordersDiv">
+        <p class="properties">Border Countries:</p>
+        <div class="main__InfoDiv__bordersDiv__countriesDiv" id="border-countries">
+          <button class="btn">NULL</button>
+          <button class="btn">NULL</button>
+          <button class="btn">NULL</button>
+          <button class="btn">NULL</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

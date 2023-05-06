@@ -14,6 +14,10 @@ body {
   background-color: getTheme(true, "bg");;
 }
 
+.main {
+  color: getTheme(true, "text");
+}
+
 
 .dark-mode {
   .nav {
@@ -24,6 +28,10 @@ body {
     a{
       color: getTheme(false, "text");
     }
+  }
+
+  .main {
+    color: getTheme(false, "text");
   }
 
   background-color: getTheme(false, "bg");

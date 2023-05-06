@@ -8,9 +8,10 @@ function themeHandler() {
   document.querySelector("#regions").classList.toggle("dark-mode")
 }
 
-function createCountry(name, population, region, capital, img) {
+function createCountry(name, population, region, capital, img, cca2) {
   const countryDiv = document.createElement("div")
   countryDiv.classList.add("countryBox")
+  countryDiv.setAttribute('id', `${cca2}`)
   countryDiv.innerHTML = `
     <img src=${img} alt="">
     <div class="countryBox__infoDiv">
@@ -21,6 +22,11 @@ function createCountry(name, population, region, capital, img) {
     </div>
   `
   return countryDiv
+}
+
+function showCountryInfo(e) {
+  localStorage.setItem("cca2", e.target.closest(".countryBox").id)
+  window.location.replace("./countryPage.html");
 }
 
 // function AddAllCountries() {
@@ -42,7 +48,8 @@ function AddAllCountries() {
   .then(data => {
     console.log(data);
     data.forEach(element => {
-      const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png)
+      const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png, element.cca2)
+      country.addEventListener("click", showCountryInfo)
       countriesDiv.append(country)
     });
   })
@@ -80,4 +87,5 @@ function sendHTTPRequest(url, data) {
 
 
 themeBtn.addEventListener("click", themeHandler)
+localStorage.clear()
 AddAllCountries()
