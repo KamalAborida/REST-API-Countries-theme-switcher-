@@ -114,7 +114,7 @@ function loadCountryData(name) {
 
 function returnToMainPage() {
   localStorage.clear()
-  window.location.replace("./landingPage.html");
+  window.location.replace("../index.html");
 }
 
 function sendHTTPRequest(url, data) {
