@@ -138,7 +138,7 @@ html {
   appearance: none;
   width: 50%;
   border-radius: 5px;
-  border-radius: 5px;
+  background-image: url("../../assets/icons8-down-button-30.png");
   border: 0;
   padding: 1em;
   /* Optional styles to match the arrow icon's size to the height of the select box */
@@ -164,7 +164,7 @@ html {
 }
 
 #regions {
-  background-image: url("../../assets/icons8-thick-arrow-pointing-down-30B.png");
+  background-image: url("../assets/icons8-thick-arrow-pointing-down-30B.png");
   background-color: hsl(0, 0%, 100%);
   color: hsl(207, 26%, 17%);
   box-shadow: 1px 1px 6px 2px rgba(128, 128, 128, 0.456);
@@ -192,7 +192,7 @@ html {
 }
 
 .dark-mode #regions {
-  background-image: url("../../assets/icons8-thick-arrow-pointing-down-30W.png");
+  background-image: url("../assets/icons8-thick-arrow-pointing-down-30W.png");
   background-color: hsl(209, 23%, 22%);
   color: hsl(0, 0%, 100%);
   box-shadow: 1px 1px 6px 2px rgba(18, 18, 18, 0.456);

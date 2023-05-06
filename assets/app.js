@@ -23,6 +23,20 @@ function createCountry(name, population, region, capital, img) {
   return countryDiv
 }
 
+// function AddAllCountries() {
+//   sendHTTPRequest("./JSON/data.json")
+//   .then(data => {
+//     console.log(data);
+//     data.forEach(element => {
+//       const country = createCountry(element.name, element.population, element.region, element.capital, element.flag)
+//       countriesDiv.append(country)
+//     });
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   })
+// }
+
 function AddAllCountries() {
   sendHTTPRequest("https://restcountries.com/v3.1/all")
   .then(data => {
@@ -41,6 +55,9 @@ function sendHTTPRequest(url, data) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
     xhr.open("GET", url)
+
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "*")
+    xhr.setRequestHeader("Vary", "Origin")
 
     xhr.onload = () => {
       if (xhr.status >= 200 && xhr.status < 300) {  // success
