@@ -88,9 +88,9 @@ function addCountryData(name, population, region, subregion, capital, flag, tld,
   addBorderCountries(borders)
 }
 
-function loadCountryData(name) {
-  name = localStorage.getItem("cca2").toLowerCase()
-  sendHTTPRequest(`https://restcountries.com/v3.1/alpha/${name}`)
+function loadCountryData(cca2) {
+  // cca2 = localStorage.getItem("cca2").toLowerCase()
+  sendHTTPRequest(`https://restcountries.com/v3.1/alpha/${cca2}`)
   .then(data => {
     country = data[0]
     // console.log(country);
@@ -100,7 +100,7 @@ function loadCountryData(name) {
       country.region,
       country.subregion,
       country.capital[0],
-      country.flags.png,
+      country.flags.svg,
       country.tld,          // returns an array
       country.currencies,   // returns an object
       country.languages,    // returns an object
@@ -121,9 +121,6 @@ function sendHTTPRequest(url, data) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
     xhr.open("GET", url)
-
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "*")
-    xhr.setRequestHeader("Vary", "Origin")
 
     xhr.onload = () => {
       if (xhr.status >= 200 && xhr.status < 300) {  // success
@@ -146,4 +143,4 @@ function sendHTTPRequest(url, data) {
 
 themeBtn.addEventListener("click", themeHandler)
 backBtn.addEventListener("click", returnToMainPage)
-loadCountryData(localStorage.getItem("countyName"))
+loadCountryData(localStorage.getItem("cca2"))

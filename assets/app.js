@@ -1,5 +1,8 @@
 const countriesDiv = document.getElementById("countries")
 const themeBtn = document.getElementById("themeBtn")
+const searchInpt = document.getElementById("search-inpt")
+const filterBtn = document.getElementById("regions")
+let countriesData = []
 
 function themeHandler() {
   document.body.classList.toggle("dark-mode")
@@ -29,24 +32,11 @@ function showCountryInfo(e) {
   window.location.replace("./Pages/countryPage.html");
 }
 
-// function AddAllCountries() {
-//   sendHTTPRequest("./JSON/data.json")
-//   .then(data => {
-//     console.log(data);
-//     data.forEach(element => {
-//       const country = createCountry(element.name, element.population, element.region, element.capital, element.flag)
-//       countriesDiv.append(country)
-//     });
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   })
-// }
-
 function AddAllCountries() {
   sendHTTPRequest("https://restcountries.com/v3.1/all")
   .then(data => {
-    console.log(data);
+    countriesData = [...data]
+    console.log(countriesData);
     data.forEach(element => {
       const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png, element.cca2)
       country.addEventListener("click", showCountryInfo)
@@ -55,6 +45,46 @@ function AddAllCountries() {
   })
   .catch(err => {
     console.log(err);
+  })
+}
+
+function search(e) {
+  let countriesArray2 = countriesData.filter(element => {
+    if (element.name.common.toLowerCase().includes(searchInpt.value.trim().toLowerCase())) {
+      return element
+    }
+  })
+  console.log(countriesArray2);
+  document.getElementById("countries").innerHTML = ""
+  countriesArray2.forEach(element => {
+  const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png, element.cca2)
+  country.addEventListener("click", showCountryInfo)
+  countriesDiv.append(country)
+  })
+}
+
+function filter(e) {
+  if (e.target.value.trim().toLowerCase() == "all") {
+    document.getElementById("countries").innerHTML = ""
+    countriesData.forEach(element => {
+      const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png, element.cca2)
+      country.addEventListener("click", showCountryInfo)
+      countriesDiv.append(country)
+    })
+    return
+  }
+
+  let countriesArray2 = countriesData.filter(element => {
+    if (element.region.trim().toLowerCase() == e.target.value.trim().toLowerCase()) {
+      return element
+    }
+  })
+  console.log(countriesArray2);
+  document.getElementById("countries").innerHTML = ""
+  countriesArray2.forEach(element => {
+    const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png, element.cca2)
+    country.addEventListener("click", showCountryInfo)
+    countriesDiv.append(country)
   })
 }
 
@@ -85,7 +115,9 @@ function sendHTTPRequest(url, data) {
 }
 
 
-
+filterBtn.addEventListener("change", filter)
+searchInpt.addEventListener("input", search)
 themeBtn.addEventListener("click", themeHandler)
+// console.log(countriesData);
 localStorage.clear()
 AddAllCountries()

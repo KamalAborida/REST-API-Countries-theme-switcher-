@@ -88,7 +88,8 @@ html {
 
 @media screen and (min-width: 500px) {
   .countryBox {
-    height: auto;
+    max-height: 450px;
+    overflow-y: hidden;
   }
   .countryName {
     margin-bottom: 30px;
