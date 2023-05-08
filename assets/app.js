@@ -36,7 +36,7 @@ function AddAllCountries() {
   sendHTTPRequest("https://restcountries.com/v3.1/all")
   .then(data => {
     countriesData = [...data]
-    console.log(countriesData);
+    // console.log(countriesData);
     data.forEach((element, indx) => {
       if (element.name.common.toLowerCase() == "israel") {
         data.splice(indx, 1)
@@ -59,7 +59,7 @@ function search(e) {
       return element
     }
   })
-  console.log(countriesArray2);
+  // console.log(countriesArray2);
   document.getElementById("countries").innerHTML = ""
   countriesArray2.forEach(element => {
   const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png, element.cca2)
@@ -84,7 +84,7 @@ function filter(e) {
       return element
     }
   })
-  console.log(countriesArray2);
+  // console.log(countriesArray2);
   document.getElementById("countries").innerHTML = ""
   countriesArray2.forEach(element => {
     const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png, element.cca2)

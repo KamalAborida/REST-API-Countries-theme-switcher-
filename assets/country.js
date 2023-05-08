@@ -77,7 +77,7 @@ function addBorderCountries(countries) {
 }
 
 function showCountryInfo(e) {
-  console.log(e.target);
+  // console.log(e.target);
   localStorage.setItem("cca2", e.target.id)
   window.location.replace("./countryPage.html");
 }
