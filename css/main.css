@@ -393,7 +393,7 @@ body {
     align-items: center;
   }
   .main__flagDiv img {
-    width: 80%;
+    max-width: 80%;
   }
   .main__InfoDiv {
     width: 45%;

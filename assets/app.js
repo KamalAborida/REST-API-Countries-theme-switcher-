@@ -37,7 +37,12 @@ function AddAllCountries() {
   .then(data => {
     countriesData = [...data]
     console.log(countriesData);
-    data.forEach(element => {
+    data.forEach((element, indx) => {
+      if (element.name.common.toLowerCase() == "israel") {
+        data.splice(indx, 1)
+        countriesData.splice(indx, 1)
+        return
+      }
       const country = createCountry(element.name.common, element.population, element.region, element.capital, element.flags.png, element.cca2)
       country.addEventListener("click", showCountryInfo)
       countriesDiv.append(country)

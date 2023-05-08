@@ -69,9 +69,17 @@ function addBorderCountries(countries) {
   countries.forEach(country => {
     const btn = document.createElement("button")
     btn.classList.add("btn")
+    btn.setAttribute("id", `${country}`)
     btn.innerHTML += country
     borderCountries.append(btn)
+    btn.addEventListener("click", showCountryInfo)
   })
+}
+
+function showCountryInfo(e) {
+  console.log(e.target);
+  localStorage.setItem("cca2", e.target.id)
+  window.location.replace("./countryPage.html");
 }
 
 function addCountryData(name, population, region, subregion, capital, flag, tld, currencies, languages, borders) {
